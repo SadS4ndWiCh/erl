@@ -13,10 +13,10 @@ solve([O|_],  []) when is_atom(O)   -> { err, nil };
 solve([N|T],   S) when is_number(N) -> solve(T, [N] ++ S);
 
 %% Operators with two operands
-solve([add|T],  [A|[B|S]]) -> solve([B+A] ++ T, S);
-solve([sub|T],  [A|[B|S]]) -> solve([B-A] ++ T, S);
-solve([mul|T],  [A|[B|S]]) -> solve([B*A] ++ T, S);
-solve([tdiv|T], [A|[B|S]]) -> solve([B/A] ++ T, S);
+solve([add|T],  [A,B|S]) -> solve([B+A] ++ T, S);
+solve([sub|T],  [A,B|S]) -> solve([B-A] ++ T, S);
+solve([mul|T],  [A,B|S]) -> solve([B*A] ++ T, S);
+solve([tdiv|T], [A,B|S]) -> solve([B/A] ++ T, S);
 
 solve([add|_],  [_|[]]) -> { err, nil };
 solve([sub|_],  [_|[]]) -> { err, nil };
