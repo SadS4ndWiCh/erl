@@ -22,10 +22,10 @@ To use an operator, use their respective `atom`:
 
 | Atom   | Operator | Operands  | Description                  |
 | ------ | -------- | --------- | ---------------------------- |
-| `add`  | `+`      | `A` | `B` | Adds operands `A` and `B`    |
-| `sub`  | `-`      | `A` | `B` | Subtracts operand `B` to `A` |
-| `mul`  | `*`      | `A` | `B` | Multiply operand `B` to `A`  |
-| `tdiv` | `/`      | `A` | `B` | Divides operand `A` by `B`   |
+| `add`  | `+`      | `A` & `B` | Adds operands `A` and `B`    |
+| `sub`  | `-`      | `A` & `B` | Subtracts operand `B` to `A` |
+| `mul`  | `*`      | `A` & `B` | Multiply operand `B` to `A`  |
+| `tdiv` | `/`      | `A` & `B` | Divides operand `A` by `B`   |
 | `pow`  | `^`      | `A`       | Power the operand `A` by 2   |
 
 ```erl
