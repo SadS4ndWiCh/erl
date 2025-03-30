@@ -14,8 +14,8 @@ pop([Head | Tail]) ->
     {Head, Tail}.
 
 iter([]) ->
-    io:format("Finish!\n");
+    io:format("Finish!~n");
 
 iter([Head | Tail]) ->
-    io:format(Head ++ "\n"),
+    io:format("~p~n", [Head]),
     iter(Tail).
