@@ -8,7 +8,6 @@ solve([], []) -> { ok, 0 };
 solve([],  S) -> { err, S }; %% Retuning the stack only for testing purpose
 solve([N|[]], []) when is_number(N) -> { ok, N };
 solve([O|_],  []) when is_atom(O)   -> { err, nil };
-solve([O|_],  []) when is_atom(O)   -> { err, nil };
 
 solve([N|T],   S) when is_number(N) -> solve(T, [N] ++ S);
 
